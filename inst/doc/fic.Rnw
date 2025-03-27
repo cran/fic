@@ -21,7 +21,7 @@ opts_chunk$set(fig.path="fic-")
 
 \title{Different Models for Different Purposes: Focused Model Comparison in R}
 \author{
-  ~\\Chris Jackson <chris.jackson@mrc-bsu.cam.ac.uk>,\\
+  ~\\Christopher Jackson <chris.jackson@mrc-bsu.cam.ac.uk>,\\
   Howard Thom <howard.thom@bristol.ac.uk>,\\
   Gerda Claeskens <gerda.claeskens@kuleuven.be>
 }
@@ -181,6 +181,8 @@ estimate of $\bgamma$ under the wide model.
     by $n$.  Thus their definition of $\omega$ is the same as ours
     since $n$ cancels, but their definitions of $Q_S$ and $Q$ are different. }
 and subscripts $0$ and $1$ select the rows and columns forming the submatrices of $J$ that correspond to parameters $\btheta$ and $\bgamma$ respectively.  The partial derivatives of the focus $\mu$ are evaluated at the estimates from the wide model.
+
+%% TODO should it be \pi_S not \pi ? 
 
 \item $G_S = \pi^\top Q_S \pi  Q^{-1}$ is an estimate of the transformation that maps the wide model estimate of $\bdelta$ to the submodel $S$ estimate, where 
     $Q_S = (\pi Q^{-1} \pi^\top)^{-1}$, $Q^{-1} = J_{11}$ and $\pi$ is the projection matrix consisting of 0s and 1s which maps a vector of the same length as $(\btheta,\bgamma)$ to a subvector containing the elements corresponding to submodel $S$. 
@@ -890,7 +892,7 @@ under competing models.
 Focused model comparison principles might also be used for Bayesian
 inference.  In realistic situations, the true process is typically
 more complex than the biggest model that can be identified from the
-data.  In a Bayesian perspective, we might use a
+data.  From a Bayesian perspective, we might use a
 theoretically-realistic model, but with a prior that encodes external
 information to enable the parameters to be identified from the data,
 e.g., through shrinkage, regularisation or elicited judgements.

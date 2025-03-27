@@ -55,11 +55,11 @@ ggplot_fic(ficres)
 summary(ficres)
 
 ## ----eval=FALSE-----------------------------------------------------
-#  fns <- list(coef = function(x)coef(x),
-#              nobs = function(x)nobs(x),
-#              vcov = function(x)vcov(x))
-#  fic1 <- fic(wide = wide.glm, inds = inds, inds0 = inds0,
-#              focus = prob_logistic, fns = fns, X = X)
+# fns <- list(coef = function(x)coef(x),
+#             nobs = function(x)nobs(x),
+#             vcov = function(x)vcov(x))
+# fic1 <- fic(wide = wide.glm, inds = inds, inds0 = inds0,
+#             focus = prob_logistic, fns = fns, X = X)
 
 ## -------------------------------------------------------------------
 library("survival")
@@ -71,15 +71,15 @@ inds0 <- expand_inds(c(1,0,0,0,0,0,0), wide)
 inds0
 
 ## ----eval=FALSE-----------------------------------------------------
-#  list(focus = fic:::cox_hr,
-#       deriv = fic:::cox_hr_deriv,
-#       dH = fic:::cox_hr_dH)
-#  list(focus = fic:::cox_cumhaz,
-#       deriv = fic:::cox_cumhaz_deriv,
-#       dH = fic:::cox_cumhaz_dH)
-#  list(focus = fic:::cox_survival,
-#       deriv = fic:::cox_survival_deriv,
-#       dH = fic:::cox_survival_dH)
+# list(focus = fic:::cox_hr,
+#      deriv = fic:::cox_hr_deriv,
+#      dH = fic:::cox_hr_dH)
+# list(focus = fic:::cox_cumhaz,
+#      deriv = fic:::cox_cumhaz_deriv,
+#      dH = fic:::cox_cumhaz_dH)
+# list(focus = fic:::cox_survival,
+#      deriv = fic:::cox_survival_deriv,
+#      dH = fic:::cox_survival_dH)
 
 ## -------------------------------------------------------------------
 combs <- all_inds(wide, inds0)
@@ -101,11 +101,11 @@ ggplot_fic(ficall, ci = FALSE, xlim = c(0,1))
 summary(ficall)
 
 ## ----echo=FALSE,eval=FALSE------------------------------------------
-#  par(mfrow = c(1,2))
-#  plot(ficall$FIC[ficall$vals=="female"], ficall$focus[ficall$vals=="female"],
-#       xlim = c(0,30), ylim = c(0, 1),
-#       ylab = "5yr survival estimates, women", xlab="FIC")
-#  plot(ficall$FIC[ficall$vals=="male"], ficall$focus[ficall$vals=="male"],
-#       xlim = c(0,30), ylim = c(0.2, 0.9),
-#       ylab = "5yr survival estimates, men", xlab = "FIC")
+# par(mfrow = c(1,2))
+# plot(ficall$FIC[ficall$vals=="female"], ficall$focus[ficall$vals=="female"],
+#      xlim = c(0,30), ylim = c(0, 1),
+#      ylab = "5yr survival estimates, women", xlab="FIC")
+# plot(ficall$FIC[ficall$vals=="male"], ficall$focus[ficall$vals=="male"],
+#      xlim = c(0,30), ylim = c(0.2, 0.9),
+#      ylab = "5yr survival estimates, men", xlab = "FIC")
 

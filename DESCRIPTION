@@ -1,7 +1,7 @@
 Package: fic
 Title: Focused Information Criteria for Model Comparison
-Version: 1.0.0
-Date: 2019-04-09
+Version: 1.0.1
+Date: 2025-03-24
 Authors@R: c(person("Christopher","Jackson", role=c("cre","aut"),
 	            email="chris.jackson@mrc-bsu.cam.ac.uk",
 		    comment="package design and programming"),
@@ -14,20 +14,20 @@ Description: Compares how well different models estimate a quantity of interest 
 Maintainer: Christopher Jackson <chris.jackson@mrc-bsu.cam.ac.uk>
 Depends: R (>= 2.10)
 Imports: stats, numDeriv, mvtnorm, ggplot2, scales, survival, tensor,
-        abind
+        abind, mgcv
 URL: https://github.com/chjackson/fic
 BugReports: https://github.com/chjackson/fic/issues
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 7.3.2
 Suggests: knitr, rmarkdown, testthat, msm(>= 1.6.6), flexsurv, sn,
         gapminder, GGally
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2019-04-12 11:20:35 UTC; chris
+Packaged: 2025-03-27 16:44:41 UTC; Chris J
 Author: Christopher Jackson [cre, aut] (package design and programming),
   Gerda Claeskens [aut] (method development and design advice),
   Howard Thom [ctb]
 Repository: CRAN
-Date/Publication: 2019-04-13 08:32:39 UTC
+Date/Publication: 2025-03-27 17:20:02 UTC

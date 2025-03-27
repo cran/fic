@@ -110,10 +110,11 @@ X <- model.matrix(wide.lm)
 Y <- model.response(model.frame(wide.lm))
 ficres <- fic(wide.lm, inds=inds, focus=focus_loglik, X=X, Y=Y)
 
-## -------------------------------------------------------------------
-ficres <- ficres[ficres$vals=="ave",]
-aics <- sapply(attr(ficres,"sub"), AIC)
-qplot(ficres$rmse, aics,
-      xlab="Root mean square error of log density estimate",
-      ylab="AIC") 
+## ----eval=FALSE-----------------------------------------------------
+# ficres <- ficres[ficres$vals=="ave",]
+# aics <- sapply(attr(ficres,"sub"), AIC)
+# ggplot(data=NULL, aes(x=ficres[["rmse"]], y=aics)) +
+#   geom_point() +
+#   xlab("Root mean square error of log density estimate") +
+#   ylab("AIC")
 
